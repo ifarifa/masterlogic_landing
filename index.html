@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MasterLogic_ProMix Engine v6.65</title>
+<style>
+/* Reset & font */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+body { background:#0a0a0a; color:#fff; line-height:1.6; }
+a { color:#00ffff; text-decoration:none; }
+a:hover { color:#ffcc00; }
+.container { width:90%; max-width:1100px; margin:0 auto; padding:50px 0; }
+header { text-align:center; margin-bottom:50px; }
+h1 { font-size:2.5rem; color:#ffcc00; margin-bottom:10px; }
+h2 { font-size:1.5rem; color:#00ffff; margin-bottom:15px; }
+h3 { font-size:1.2rem; margin-bottom:10px; }
+p { margin-bottom:20px; }
+.btn { display:inline-block; padding:15px 30px; background:#ffcc00; color:#000; font-weight:bold; border-radius:5px; transition:0.3s; }
+.btn:hover { background:#00ffff; transform:scale(1.05); }
+section { margin-bottom:70px; }
+.features, .dashboard { display:flex; flex-wrap:wrap; gap:30px; justify-content:space-between; }
+.feature-card { background:#111; padding:20px; border-radius:12px; flex:1; min-width:250px; transition:0.4s; }
+.feature-card:hover { transform: translateY(-10px) scale(1.03); box-shadow:0 15px 25px rgba(255,204,0,0.5); background:#1a1a1a; }
+.feature-card h3 { color:#ffcc00; transition:0.4s; }
+.feature-card:hover h3 { color:#00ffff; }
+.pricing { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; margin-top:50px; }
+.pricing-card { background:#111; padding:30px 20px; border-radius:15px; text-align:center; flex:1; min-width:250px; max-width:300px; border:2px solid #222; transition:0.4s; }
+.pricing-card h3 { color:#ffcc00; margin-bottom:15px; font-size:1.5rem; }
+.pricing-card .price { font-size:2rem; color:#00ffff; margin-bottom:20px; }
+.pricing-card ul { list-style:none; margin-bottom:20px; }
+.pricing-card ul li { margin:10px 0; }
+.pricing-card .btn { width:100%; }
+.pricing-card:hover { transform: translateY(-15px) scale(1.05); box-shadow:0 20px 35px rgba(0,255,255,0.5); border-color:#00ffff; background:#1a1a1a; }
+.cta { flex-direction:column; align-items:center; text-align:center; background:#111; padding:50px 20px; border-radius:10px; }
+footer { text-align:center; padding:30px 0; font-size:0.9rem; color:#888; }
+
+/* WhatsApp Floating Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: -200px;
+    background-color:#25D366;
+    color:#fff;
+    border-radius:50px;
+    padding:12px 20px;
+    font-size:18px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:right 0.5s ease, transform 0.3s ease;
+    z-index:1000;
+}
+.whatsapp-btn img { width:28px; height:28px; }
+.whatsapp-btn:hover { transform:scale(1.1); box-shadow:0 10px 25px rgba(0,0,0,0.4); }
+.show-wa { right:20px !important; }
+
+@media(max-width:768px){ .features,.dashboard,.pricing{flex-direction:column;} .whatsapp-btn{padding:10px 12px;font-size:16px;} }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>MasterLogic_ProMix Engine v6.65</h1>
+    <p>Trade dengan Struktur. Kontrol Risiko. Maksimalkan Profit.</p>
+    <a href="#pricing" class="btn">Dapatkan Sekarang</a>
+</header>
+
+<section class="features container">
+    <div class="feature-card">
+        <h3>System 1 – Pure Sell</h3>
+        <p>Layered grid untuk kondisi tekanan turun. Terstruktur, otomatis, dan aman terhadap intervensi manual.</p>
+    </div>
+    <div class="feature-card">
+        <h3>System 2 – Pure Buy</h3>
+        <p>Grid adaptif untuk kondisi naik. Booster lot otomatis dan proteksi trailing siap pakai.</p>
+    </div>
+    <div class="feature-card">
+        <h3>System 3 – SMA Trend</h3>
+        <p>Trend-following dengan auto switch, smart recovery, dan switch mode fleksibel untuk profit maksimal.</p>
+    </div>
+</section>
+
+<section class="dashboard container">
+    <div class="feature-card">
+        <h3>Dashboard Modern</h3>
+        <p>Status real-time per system, floating profit, manual close counter, news monitor, dan target tracking. Semua langsung di chart.</p>
+    </div>
+    <div class="feature-card">
+        <h3>News Protection</h3>
+        <p>Filter high & moderate impact, lock grid otomatis sebelum & sesudah news, proteksi volatilitas tinggi untuk stabilitas trading.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Trade Manager (Engine 2)</h3>
+        <p>Kelola manual trade atau grid hybrid. Basket trailing, global stop loss, auto target profit, dan dynamic grid expansion.</p>
+    </div>
+</section>
+
+<section class="pricing container" id="pricing">
+    <div class="pricing-card">
+        <h3>Starter</h3>
+        <div class="price">$49</div>
+        <ul>
+            <li>1 License</li>
+            <li>System 1 & 2</li>
+            <li>Basic Dashboard</li>
+            <li>News Filter</li>
+        </ul>
+        <a href="#" class="btn">Beli Sekarang</a>
+    </div>
+    <div class="pricing-card">
+        <h3>Pro</h3>
+        <div class="price">$99</div>
+        <ul>
+            <li>1 License</li>
+            <li>Semua System</li>
+            <li>Full Dashboard + Visual Trailing</li>
+            <li>News Protection + Lock Recovery</li>
+            <li>Trade Manager Engine 2</li>
+        </ul>
+        <a href="#" class="btn">Beli Sekarang</a>
+    </div>
+    <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price">$199</div>
+        <ul>
+            <li>Unlimited License</li>
+            <li>Semua System & Grid</li>
+            <li>Custom Dashboard + Priority Support</li>
+            <li>Advanced News & Auto Recovery</li>
+            <li>Full Trade Manager</li>
+        </ul>
+        <a href="#" class="btn">Beli Sekarang</a>
+    </div>
+</section>
+
+<section class="cta container">
+    <h2>Siap Maksimalkan Trading Anda?</h2>
+    <p>Dapatkan MasterLogic_ProMix Engine v6.65 sekarang dan mulai trading dengan disiplin, struktur, dan kontrol risiko maksimal.</p>
+    <a href="#pricing" class="btn">Dapatkan Lisensi Sekarang</a>
+</section>
+
+<footer>
+    &copy; 2026 MasterLogic AI. Semua hak cipta dilindungi.
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a id="whatsappBtn" href="https://wa.me/6282189732425" target="_blank" class="whatsapp-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Chat Sekarang
+</a>
+
+<script>
+// Munculkan WA setelah 2 detik
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.getElementById('whatsappBtn').classList.add('show-wa');
+    }, 2000);
+});
+</script>
+
+</body>
+</html>
